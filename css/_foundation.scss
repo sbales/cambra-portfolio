@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Foundation for Sites by ZURB
  * Version 6.2.3
@@ -1050,14 +1049,14 @@ select {
   border-radius: 5px;
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
-  font-size: 0.9rem;
-  background-color: #119692;
-  color: #fefefe; }
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: $teal; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #0e807c;
-    color: #fefefe; }
+    background-color: $teal;
+    color: $white; }
   .button.tiny {
     font-size: 0.6rem; }
   .button.small {
@@ -1076,11 +1075,11 @@ select {
       background-color: #0e7875;
       color: #fefefe; }
   .button.secondary {
-    background-color: #FFE484;
-    color: #0a0a0a; }
+    background-color: transparent;
+    color: $black; }
     .button.secondary:hover, .button.secondary:focus {
-      background-color: #ffd337;
-      color: #0a0a0a; }
+      background-color: $pastel;
+      color: $black; }
   .button.alert {
     background-color: #FFE484;
     color: #0a0a0a; }
@@ -1113,36 +1112,33 @@ select {
       color: #fefefe; }
   .button.hollow {
     
-    color: #119692; }
+    color: $black; }
     .button.hollow, .button.hollow:hover, .button.hollow:focus {
       background-color: transparent; }
     .button.hollow:hover, .button.hollow:focus {
       
-      color: #094b49; }
+      color: $slate; }
     .button.hollow.primary {
-      color: #119692; }
+        color: $black;
+}
       .button.hollow.primary:hover, .button.hollow.primary:focus {
         color: $teal; }
     .button.hollow.secondary {
-      border: 1px solid #FFE484;
-      color: #FFE484; }
+      color: $slate; }
       .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-        border-color: #c29700;
-        color: #c29700; }
+        color: $pastel; }
     .button.hollow.alert {
-      border: 1px solid #FFE484;
+      
       color: #FFE484; }
       .button.hollow.alert:hover, .button.hollow.alert:focus {
-        border-color: #c29700;
-        color: #c29700; }
+        color: $pastel; }
     .button.hollow.success {
       
       color: #119692; }
       .button.hollow.success:hover, .button.hollow.success:focus {
-        border-color: #094b49;
+        
         color: #094b49; }
     .button.hollow.warning {
-      border: 1px solid #ffae00;
       color: #ffae00; }
       .button.hollow.warning:hover, .button.hollow.warning:focus {
         border-color: #805700;
@@ -1154,11 +1150,10 @@ select {
         border-color: #161617;
         color: #161617; }
     .button.hollow.header {
-      border: 1px solid #7D8895;
-      color: #7D8895; }
+        font-size: 3rem;    
+        color: $black; }
       .button.hollow.header:hover, .button.hollow.header:focus {
-        border-color: #3e444b;
-        color: #3e444b; }
+        color: $teal; }
   .button.disabled, .button[disabled] {
     opacity: 0.25;
     cursor: not-allowed; }
@@ -2558,7 +2553,7 @@ table.hover tr:nth-of-type(even):hover {
   background: #119692;
   color: #fefefe; }
   .label.secondary {
-    background: #FFE484;
+    background: none;
     color: #0a0a0a; }
   .label.alert {
     background: #FFE484;

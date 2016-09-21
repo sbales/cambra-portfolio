@@ -1,0 +1,167 @@
+
+
+/*Font Variables*/
+$font-stack: 'BenchNine', sans-serif;
+$title-fonts: 'Amaranth', monospace;
+
+/*Colors*/
+$teal: #119692;
+$pastel: #FFE484;
+$white: #fcfcfc;
+$slate: #7d8895;
+$black: #2b2b2e;
+
+/*Foundation*/
+@import 'foundation';
+
+
+/*Typography*/
+h1{
+    font-family: $title-fonts;
+    color: $teal;
+}
+
+h2{
+    @extend h1;
+}
+
+h3{
+    font-family: $font-stack;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+}
+.left-aligin{
+    text-align: left;
+}
+.right-align{
+    text-align: right;
+}
+.center-align{
+    text-align: center;
+}
+.bold{
+    font-weight: 700;
+}
+
+
+/*Body Items*/
+*{
+    margin: 0px;
+}
+body{
+    font-family: $font-stack;
+    color: $black;
+    background-color: $white;
+    @extend .no-margin;
+    @extend .no-padding;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    padding-top: 10px;
+    height: 50px;
+    width: 80%;
+    @extend .center;
+    text-align:center;
+    line-height:50px;
+}
+main {
+    @extend .center;
+    width: 75%;
+    @extend .page-margin;
+}
+footer{
+    height: 50px;
+    background-color: $teal;
+    @extend .small-padding;    
+}
+.nav-bar{
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+}
+.landing-page{
+    height: 70vh;
+}
+.columns {
+    height: inherit;
+}
+
+/*Margins*/
+.no-margin{
+    margin: 0px !important;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+.small-margin{
+    margin: 5px;
+}
+
+.small-padding{
+    padding: 5px;
+}
+
+.med-margin{
+    margin: 10px;
+}
+
+.med-padding{
+    padding: 10px;
+}
+
+.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+.page-margin {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/*Display Setting*/
+.block{
+    display: block;
+    width: 100%;
+}
+.table{
+    display: table;
+    height: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/*Buttons*/
+.nav-links{
+    color: $black;
+    border: none;
+    border-color: transparent;
+    font-size: 1em;    
+}
+
+.nav-links:hover{
+    color: $teal;
+}
+
+
+/*Images*/
+.main-headshot {
+    height: 100%;
+    overflow: hidden;
+    background-image: url(http://placehold.it/1000x1000);
+    background-position: center;
+    background-size: cover;
+}
+.signature{
+    width: 100%;
+    height: auto;
+}
+
+
+
