@@ -4761,6 +4761,14 @@ h3 {
 .bold {
   font-weight: 700; }
 
+footer a {
+  color: #FFE484;
+  font-size: .7em;
+  vertical-align: sub; }
+
+footer a:hover {
+  color: #7d8895; }
+
 /*Body Items*/
 * {
   margin: 0px; }
@@ -4771,6 +4779,15 @@ body {
   background-color: #fcfcfc;
   height: 100%;
   width: 100%; }
+
+.page-wrap {
+  min-height: 99vh;
+  /* equal to footer height */
+  margin-bottom: -70px; }
+
+.page-wrap:after {
+  content: "";
+  display: block; }
 
 header {
   padding-top: 10px;
@@ -4784,7 +4801,12 @@ main {
 
 footer {
   height: 50px;
-  background-color: #119692; }
+  background-color: #119692;
+  padding-right: 5%;
+  padding-left: 5%; }
+
+footer .columns {
+  height: 50px; }
 
 .nav-bar {
   border-top: 1px solid #2b2b2e;
@@ -4796,23 +4818,26 @@ footer {
 .columns {
   height: inherit; }
 
+.headshots-col {
+  height: 80vh; }
+
 /*Margins*/
-.no-margin, body {
+.no-margin, html, body, footer .row, .two-thirds, .one-third, .half {
   margin: 0px !important; }
 
-.no-padding, body {
+.no-padding, html, body, footer .row, .two-thirds, .one-third {
   padding: 0px; }
 
 .small-margin {
   margin: 5px; }
 
-.small-padding, footer {
+.small-padding, .headshots-col {
   padding: 5px; }
 
 .med-margin {
   margin: 10px; }
 
-.med-padding {
+.med-padding, footer .columns {
   padding: 10px; }
 
 .center, header, main {
@@ -4821,7 +4846,7 @@ footer {
 
 .page-margin, main {
   margin-top: 20px;
-  margin-bottom: 40px; }
+  margin-bottom: 30px; }
 
 /*Display Setting*/
 .block {
@@ -4836,6 +4861,15 @@ footer {
   display: table-cell;
   vertical-align: middle; }
 
+.two-thirds {
+  height: 60%; }
+
+.one-third {
+  height: 30%; }
+
+.full-height {
+  height: 100%; }
+
 /*Buttons*/
 .nav-links {
   color: #2b2b2e;
@@ -4845,6 +4879,28 @@ footer {
 
 .nav-links:hover {
   color: #119692; }
+
+.half {
+  width: 49%;
+  line-height: .9em; }
+
+.contact {
+  font: "Amaranth", monospace;
+  font-size: 2em;
+  font-weight: 100;
+  color: #7d8895;
+  letter-spacing: .05em;
+  display: inline-block;
+  position: relative; }
+
+.contact:before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 2px;
+  bottom: 0;
+  left: 75%;
+  border-bottom: 1px solid #7d8895; }
 
 /*Images*/
 .main-headshot {
@@ -4857,5 +4913,38 @@ footer {
 .signature {
   width: 100%;
   height: auto; }
+
+.headshot1 {
+  height: 100%;
+  background-image: url(http://placehold.it/800x400);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5px; }
+
+.headshot2 {
+  height: 100%;
+  background-image: url(http://placehold.it/800x400);
+  background-position: center;
+  background-size: cover; }
+
+.headshot3 {
+  height: 49.48%;
+  background-image: url(http://placehold.it/800x400);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5px; }
+
+.headshot4 {
+  height: 49.48%;
+  background-image: url(http://placehold.it/800x400);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5px; }
+
+.headshot5 {
+  height: 100%;
+  background-image: url(http://placehold.it/800x400);
+  background-position: center;
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */

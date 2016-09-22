@@ -42,11 +42,23 @@ h3{
 .bold{
     font-weight: 700;
 }
+footer a{
+    color: $pastel;
+    font-size: .7em;
+    vertical-align: sub;
+    }
+footer a:hover{
+    color: $slate;
+    }
 
 
 /*Body Items*/
 *{
     margin: 0px;
+}
+html{
+    @extend .no-margin;
+    @extend .no-padding;
 }
 body{
     font-family: $font-stack;
@@ -56,6 +68,16 @@ body{
     @extend .no-padding;
     height: 100%;
     width: 100%;
+}
+
+.page-wrap {
+  min-height: 99vh;
+  /* equal to footer height */
+  margin-bottom: -70px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
 }
 
 header {
@@ -74,7 +96,16 @@ main {
 footer{
     height: 50px;
     background-color: $teal;
-    @extend .small-padding;    
+    padding-right: 5%;
+    padding-left: 5%;
+}
+footer .row{
+    @extend .no-margin;
+    @extend .no-padding;
+}
+footer .columns{
+    height: 50px;
+    @extend .med-padding;
 }
 .nav-bar{
     border-top: 1px solid $black;
@@ -85,6 +116,10 @@ footer{
 }
 .columns {
     height: inherit;
+}
+.headshots-col{
+    height: 80vh;
+    @extend .small-padding;
 }
 
 /*Margins*/
@@ -118,7 +153,7 @@ footer{
 }
 .page-margin {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 /*Display Setting*/
@@ -135,7 +170,19 @@ footer{
     display: table-cell;
     vertical-align: middle;
 }
-
+.two-thirds{
+    height: 60%;
+    @extend .no-margin;
+    @extend .no-padding;
+}
+.one-third{
+    height: 30%;
+    @extend .no-margin;
+    @extend .no-padding;
+}
+.full-height{
+    height:100%;
+}
 
 /*Buttons*/
 .nav-links{
@@ -147,6 +194,29 @@ footer{
 
 .nav-links:hover{
     color: $teal;
+}
+.half{
+    width: 49%;
+    @extend .no-margin;
+    line-height: .9em;
+}
+.contact{
+    font: $title-fonts;
+    font-size: 2em;
+    font-weight: 100;
+    color: $slate;
+    letter-spacing: .05em;
+    display: inline-block;
+    position: relative;
+}
+.contact:before{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    bottom: 0;
+    left: 75%;
+    border-bottom: 1px solid $slate;
 }
 
 
@@ -162,6 +232,37 @@ footer{
     width: 100%;
     height: auto;
 }
-
-
+.headshot1{
+    height: 100%;
+    background-image: url(http://placehold.it/800x400);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.headshot2{
+    height: 100%;
+    background-image: url(http://placehold.it/800x400);
+    background-position: center;
+    background-size: cover;
+}
+.headshot3{
+    height: 49.48%;
+    background-image: url(http://placehold.it/800x400);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.headshot4{
+    height: 49.48%;
+    background-image: url(http://placehold.it/800x400);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.headshot5{
+    height: 100%;
+    background-image: url(http://placehold.it/800x400);
+    background-position: center;
+    background-size: cover;
+}
 
