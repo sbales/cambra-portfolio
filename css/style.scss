@@ -14,6 +14,21 @@ $black: #2b2b2e;
 /*Foundation*/
 @import 'foundation';
 
+/*Font Awesome*/
+@import "variables";
+@import "mixins";
+@import "path";
+@import "core";
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "animated";
+@import "rotated-flipped";
+@import "stacked";
+@import "icons";
+@import "screen-reader";
+
 
 /*Typography*/
 h1{
@@ -50,6 +65,18 @@ footer a{
 footer a:hover{
     color: $slate;
     }
+div .columns i{
+    color: $teal;
+    font-size: 1em;
+}
+input{
+    color: $black;
+}
+li a{
+    font-family: inherit;
+    color: $black;
+    font-size: 1.2em;
+}
 
 
 /*Body Items*/
@@ -71,9 +98,9 @@ body{
 }
 
 .page-wrap {
-  min-height: 99vh;
+  min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -70px; 
+  margin-bottom: -50px; 
 }
 .page-wrap:after {
   content: "";
@@ -122,6 +149,7 @@ footer .columns{
     @extend .small-padding;
 }
 
+
 /*Margins*/
 .no-margin{
     margin: 0px !important;
@@ -155,6 +183,11 @@ footer .columns{
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
+.top-margin{
+    margin-top: 10px;
+}
+
 
 /*Display Setting*/
 .block{
