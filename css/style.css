@@ -6932,6 +6932,27 @@ h3 {
   letter-spacing: .3em;
   text-transform: uppercase; }
 
+h5 {
+  font-family: "BenchNine", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #7d8895;
+  letter-spacing: .05em;
+  position: relative; }
+
+h5:before {
+  content: "";
+  position: absolute;
+  width: 5%;
+  height: 2px;
+  bottom: 0;
+  border-bottom: 1px inset #7d8895;
+  margin-bottom: 3px; }
+
+p {
+  font-family: "BenchNine", sans-serif;
+  line-height: 1; }
+
 .left-aligin {
   text-align: left; }
 
@@ -6964,6 +6985,33 @@ li a {
   color: #2b2b2e;
   font-size: 1.2em; }
 
+.show {
+  display: inline;
+  font-weight: 400;
+  font-size: 1.1em; }
+
+.year {
+  display: inline;
+  float: right;
+  font-size: .9em;
+  padding-top: 4px;
+  padding-left: 3px;
+  color: #7d8895; }
+
+.playwright {
+  font-style: italic;
+  padding-left: 7px;
+  padding-bottom: 3px; }
+
+.company {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  font-size: .9em; }
+
+.role {
+  font-weight: 700;
+  padding-bottom: 7px; }
+
 /*Body Items*/
 * {
   margin: 0px; }
@@ -6978,6 +7026,7 @@ body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
+  padding-bottom: 50px;
   margin-bottom: -50px; }
 
 .page-wrap:after {
@@ -7017,10 +7066,10 @@ footer .columns {
   height: 80vh; }
 
 /*Margins*/
-.no-margin, html, body, footer .row, .two-thirds, .one-third, .half {
+.no-margin, p, html, body, footer .row, .two-thirds, .one-third, .half {
   margin: 0px !important; }
 
-.no-padding, html, body, footer .row, .two-thirds, .one-third {
+.no-padding, p, html, body, footer .row, .two-thirds, .one-third {
   padding: 0px; }
 
 .small-margin {
@@ -7045,6 +7094,12 @@ footer .columns {
 
 .top-margin {
   margin-top: 10px; }
+
+.credits {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 /*Display Setting*/
 .block {
@@ -7099,6 +7154,10 @@ footer .columns {
   bottom: 0;
   left: 75%;
   border-bottom: 1px solid #7d8895; }
+
+.resume-center {
+  border-right: 0.5px solid #7d8895;
+  border-left: 0.5px solid #7d8895; }
 
 /*Images*/
 .main-headshot {
