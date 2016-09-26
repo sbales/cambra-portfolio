@@ -3018,7 +3018,8 @@ table.hover tr:nth-of-type(even):hover {
 
 .orbit-slide {
   width: 100%;
-  max-height: 100%; }
+  max-height: 100%;
+  overflow: hidden; }
 
 .orbit-slide.no-motionui.is-active {
   top: 0;
@@ -3029,17 +3030,16 @@ table.hover tr:nth-of-type(even):hover {
 
 .orbit-image {
   margin: 0;
-  width: 100%;
-  max-width: 100%; }
+  min-width: 100%;
+  min-height: 100%; }
 
 .orbit-caption {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 1rem;
   margin-bottom: 0;
-  color: #fefefe;
-  background-color: rgba(10, 10, 10, 0.5); }
+  color: #fcfcfc;
+  background-color: #7d8895; }
 
 .orbit-previous, .orbit-next {
   position: absolute;
@@ -3049,13 +3049,13 @@ table.hover tr:nth-of-type(even):hover {
   transform: translateY(-50%);
   z-index: 10;
   padding: 1rem;
-  color: #fefefe; }
+  color: #fcfcfc; }
 
 [data-whatinput='mouse'] .orbit-previous, [data-whatinput='mouse'] .orbit-next {
   outline: 0; }
 
 .orbit-previous:hover, .orbit-next:hover, .orbit-previous:active, .orbit-next:active, .orbit-previous:focus, .orbit-next:focus {
-  background-color: rgba(10, 10, 10, 0.5); }
+  color: #119692; }
 
 .orbit-previous {
   left: 0; }
@@ -3066,7 +3066,7 @@ table.hover tr:nth-of-type(even):hover {
 
 .orbit-bullets {
   position: relative;
-  margin-top: 0.8rem;
+  margin-top: 0rem;
   margin-bottom: 0.8rem;
   text-align: center; }
 
@@ -3074,17 +3074,17 @@ table.hover tr:nth-of-type(even):hover {
   outline: 0; }
 
 .orbit-bullets button {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: .8rem;
+  height: .8rem;
   margin: 0.1rem;
-  background-color: #cacaca;
+  background-color: #FFE484;
   border-radius: 50%; }
 
 .orbit-bullets button:hover {
-  background-color: #8a8a8a; }
+  background-color: #7d8895; }
 
 .orbit-bullets button.is-active {
-  background-color: #8a8a8a; }
+  background-color: #7d8895; }
 
 .thumbnail {
   border: solid 4px #fefefe;
@@ -7012,6 +7012,16 @@ li a {
   font-weight: 700;
   padding-bottom: 7px; }
 
+.resume-links {
+  text-align: center;
+  color: #7d8895; }
+
+.resume-links a {
+  color: #7d8895; }
+
+.resume-links a:hover {
+  color: #2b2b2e; }
+
 /*Body Items*/
 * {
   margin: 0px; }
@@ -7081,7 +7091,7 @@ footer .columns {
 .med-margin {
   margin: 10px; }
 
-.med-padding, footer .columns {
+.med-padding, .orbit-caption, footer .columns {
   padding: 10px; }
 
 .center, header, main {
@@ -7096,10 +7106,14 @@ footer .columns {
   margin-top: 10px; }
 
 .credits {
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   padding-left: 10px;
   padding-right: 10px; }
+
+.portfolio-project {
+  margin-top: 50px;
+  margin-bottom: 50px; }
 
 /*Display Setting*/
 .block {
@@ -7203,5 +7217,3 @@ footer .columns {
   background-image: url(http://placehold.it/800x400);
   background-position: center;
   background-size: cover; }
-
-/*# sourceMappingURL=style.css.map */

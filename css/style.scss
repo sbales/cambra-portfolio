@@ -130,6 +130,16 @@ li a{
     font-weight: 700;
     padding-bottom: 7px;
 }
+.resume-links{
+    text-align: center;
+    color: $slate;
+}
+.resume-links a{
+    color: $slate;
+}
+.resume-links a:hover{
+    color: $black;
+}
 
 
 /*Body Items*/
@@ -242,10 +252,14 @@ footer .columns{
     margin-top: 10px;
 }
 .credits{
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
+}
+.portfolio-project{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
