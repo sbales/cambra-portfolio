@@ -140,6 +140,12 @@ li a{
 .resume-links a:hover{
     color: $black;
 }
+.contact-info{
+    color: $teal;
+    font-size: .9em;
+    vertical-align: middle;
+}
+
 
 
 /*Body Items*/
@@ -290,6 +296,27 @@ footer .columns{
 .full-height{
     height:100%;
 }
+.contact-icon{
+    height: 15px;
+    width: 15px;
+    margin-right: 3px;
+}
+.headshot-holder{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.half-headshot-holder{
+    height: 49.48%;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.object-fit{
+    object-fit: cover;
+}
+
+
 
 /*Buttons*/
 .nav-links{
@@ -333,11 +360,18 @@ footer .columns{
 
 /*Images*/
 .main-headshot {
-    height: 100%;
-    overflow: hidden;
-    background-image: url(http://placehold.it/1000x1000);
-    background-position: center;
-    background-size: cover;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
 }
 .signature{
     width: 100%;
