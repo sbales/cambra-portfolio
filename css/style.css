@@ -3008,7 +3008,8 @@ table.hover tr:nth-of-type(even):hover {
   padding-top: 0; }
 
 .orbit {
-  position: relative; }
+  position: relative;
+  min-height: none !important; }
 
 .orbit-container {
   position: relative;
@@ -7025,7 +7026,8 @@ li a {
 .contact-info {
   color: #119692;
   font-size: .9em;
-  vertical-align: middle; }
+  vertical-align: middle;
+  line-height: 1.75em; }
 
 /*Body Items*/
 * {
@@ -7049,14 +7051,22 @@ body {
   display: block; }
 
 header {
-  padding-top: 10px;
-  height: 50px;
-  width: 80%;
-  text-align: center;
-  line-height: 50px; }
+  padding: 10px 0px 0px 0px;
+  width: 95%;
+  margin: 0px;
+  text-align: center; }
+  @media (min-width: 531px) {
+    header {
+      width: 80%;
+      height: 50px;
+      line-height: 50px;
+      margin: 0px auto; } }
 
 main {
-  width: 75%; }
+  width: 90%; }
+  @media (min-width: 531px) {
+    main {
+      width: 75%; } }
 
 footer {
   height: 50px;
@@ -7099,7 +7109,7 @@ footer .columns {
 .med-padding, .orbit-caption, footer .columns {
   padding: 10px; }
 
-.center, header, main {
+.center, main {
   margin-left: auto;
   margin-right: auto; }
 
@@ -7117,8 +7127,16 @@ footer .columns {
   padding-right: 10px; }
 
 .portfolio-project {
-  margin-top: 50px;
-  margin-bottom: 50px; }
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  @media (min-width: 640px) {
+    .portfolio-project {
+      margin-top: 50px;
+      margin-bottom: 50px; } }
+
+@media (max-width: 640px) {
+  .project-text {
+    padding-bottom: 25px; } }
 
 /*Display Setting*/
 .block {
@@ -7134,13 +7152,17 @@ footer .columns {
   vertical-align: middle; }
 
 .two-thirds {
-  height: 60%; }
+  height: 100%; }
+  @media (min-width: 531px) {
+    .two-thirds {
+      height: 60%; } }
 
 .one-third {
   height: 30%; }
 
-.full-height {
-  height: 100%; }
+@media (min-width: 531px) {
+  .full-height {
+    height: 100%; } }
 
 .contact-icon {
   height: 15px;
@@ -7160,6 +7182,13 @@ footer .columns {
 
 .object-fit {
   object-fit: cover; }
+
+form {
+  width: 100%;
+  margin: 10px auto; }
+  @media (max-width: 639px) {
+    form {
+      width: 90%; } }
 
 /*Buttons*/
 .nav-links {
@@ -7196,6 +7225,25 @@ footer .columns {
 .resume-center {
   border-right: 0.5px solid #7d8895;
   border-left: 0.5px solid #7d8895; }
+  @media (max-width: 639px) {
+    .resume-center {
+      border: none; } }
+
+@media (max-width: 376px) {
+  .button {
+    padding-right: .5em;
+    padding-left: .5em; } }
+
+input[type=submit] {
+  background-color: transparent;
+  border: 1px groove #2b2b2e; }
+
+input[type=submit]:hover {
+  color: #119692;
+  border: 1px groove #119692; }
+
+.active {
+  color: #119692; }
 
 /*Images*/
 .main-headshot {
@@ -7215,35 +7263,9 @@ footer .columns {
   width: 100%;
   height: auto; }
 
-.headshot1 {
-  height: 100%;
-  background-image: url(http://placehold.it/800x400);
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 5px; }
-
-.headshot2 {
-  height: 100%;
-  background-image: url(http://placehold.it/800x400);
-  background-position: center;
-  background-size: cover; }
-
-.headshot3 {
-  height: 49.48%;
-  background-image: url(http://placehold.it/800x400);
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 5px; }
-
-.headshot4 {
-  height: 49.48%;
-  background-image: url(http://placehold.it/800x400);
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 5px; }
-
-.headshot5 {
-  height: 100%;
-  background-image: url(http://placehold.it/800x400);
-  background-position: center;
-  background-size: cover; }
+@media (max-width: 531px) {
+  .single-image {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding-bottom: 10px; } }

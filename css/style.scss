@@ -144,6 +144,7 @@ li a{
     color: $teal;
     font-size: .9em;
     vertical-align: middle;
+    line-height: 1.75em;
 }
 
 
@@ -178,17 +179,28 @@ body{
 }
 
 header {
-    padding-top: 10px;
-    height: 50px;
-    width: 80%;
-    @extend .center;
+    padding: 10px 0px 0px 0px;
+    width: 95%;
+    margin: 0px;
     text-align:center;
-    line-height:50px;
+    
+    
+    @media (min-width: 531px){
+        width: 80%;
+        height: 50px;
+        line-height:50px;
+        margin: 0px auto;
+    }
 }
+
 main {
     @extend .center;
-    width: 75%;
     @extend .page-margin;
+    width: 90%;
+    
+    @media (min-width:531px){
+       width: 75%; 
+    }    
 }
 footer{
     height: 50px;
@@ -264,8 +276,19 @@ footer .columns{
     padding-right: 10px;
 }
 .portfolio-project{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    @media (min-width:640px){
+      margin-top: 50px;
+    margin-bottom: 50px;  
+    }
+    
+}
+.project-text{
+    @media (max-width:640px){
+        padding-bottom: 25px;
+    }
 }
 
 
@@ -284,9 +307,12 @@ footer .columns{
     vertical-align: middle;
 }
 .two-thirds{
-    height: 60%;
+    height: 100%;
     @extend .no-margin;
     @extend .no-padding;
+    @media (min-width: 531px){
+        height: 60%;
+    }
 }
 .one-third{
     height: 30%;
@@ -294,7 +320,9 @@ footer .columns{
     @extend .no-padding;
 }
 .full-height{
-    height:100%;
+    @media (min-width: 531px){
+        height: 100%;
+    }
 }
 .contact-icon{
     height: 15px;
@@ -314,6 +342,14 @@ footer .columns{
 }
 .object-fit{
     object-fit: cover;
+}
+form{
+    width: 100%;
+    margin: 10px auto;
+    
+    @media (max-width:639px){
+        width: 90%;
+    }
 }
 
 
@@ -355,7 +391,30 @@ footer .columns{
 .resume-center{
     border-right: .5px solid $slate;
     border-left: .5px solid $slate;
+    
+    @media (max-width:639px){
+        border: none;
+    }
 }
+.button{
+    @media (max-width:376px){
+        padding-right: .5em;
+        padding-left: .5em;
+    }
+}
+input[type=submit]{
+    background-color: transparent;
+    border: 1px groove $black;
+    
+}
+input[type=submit]:hover{
+    color: $teal;
+    border: 1px groove $teal;
+}
+.active{
+    color: $teal;
+}
+
 
 
 /*Images*/
@@ -377,37 +436,13 @@ footer .columns{
     width: 100%;
     height: auto;
 }
-.headshot1{
-    height: 100%;
-    background-image: url(http://placehold.it/800x400);
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 5px;
+.single-image{
+    @media (max-width: 531px){
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding-bottom: 10px;
+    }
 }
-.headshot2{
-    height: 100%;
-    background-image: url(http://placehold.it/800x400);
-    background-position: center;
-    background-size: cover;
-}
-.headshot3{
-    height: 49.48%;
-    background-image: url(http://placehold.it/800x400);
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 5px;
-}
-.headshot4{
-    height: 49.48%;
-    background-image: url(http://placehold.it/800x400);
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 5px;
-}
-.headshot5{
-    height: 100%;
-    background-image: url(http://placehold.it/800x400);
-    background-position: center;
-    background-size: cover;
-}
+
 

@@ -2710,7 +2710,9 @@ table.hover tr:nth-of-type(even):hover {
     padding-top: 0; }
 
 .orbit {
-  position: relative; }
+  position: relative;
+    min-height: none !important;
+}
 
 .orbit-container {
   position: relative;
