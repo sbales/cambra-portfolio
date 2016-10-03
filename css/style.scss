@@ -444,5 +444,11 @@ input[type=submit]:hover{
         padding-bottom: 10px;
     }
 }
+.orbit-slide{
+    @media (min-width:1200px){
+        min-height: 100%;
+        width: auto;
+    }
+}
 
 

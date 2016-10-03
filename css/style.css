@@ -7269,3 +7269,8 @@ input[type=submit]:hover {
     height: 100%;
     margin: 0px;
     padding-bottom: 10px; } }
+
+@media (min-width: 1200px) {
+  .orbit-slide {
+    min-height: 100%;
+    width: auto; } }
