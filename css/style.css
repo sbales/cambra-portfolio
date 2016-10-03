@@ -7121,10 +7121,10 @@ footer .columns {
   margin-top: 10px; }
 
 .credits {
+  width: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
-  padding-left: 10px;
-  padding-right: 10px; }
+  overflow: hidden; }
 
 .portfolio-project {
   margin-top: 10px;
@@ -7189,6 +7189,17 @@ form {
   @media (max-width: 639px) {
     form {
       width: 90%; } }
+
+.thirty-three {
+  width: 100%; }
+  @media (min-width: 650px) {
+    .thirty-three {
+      width: 33.333%;
+      display: block;
+      float: left; } }
+
+.table-row {
+  display: table-row; }
 
 /*Buttons*/
 .nav-links {
