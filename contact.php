@@ -14,15 +14,7 @@
 
     <body>
         <div class="page-wrap">
-            <header class="button-bar">
-                <ul class="button-group nav-bar">
-                    <li class="hollow button primary"><a href="about">About</a></li>
-                    <li class="hollow button primary"><a href="resume">Resume</a></li>
-                    <li class="hollow button primary"><a href="index">Home</a></li>
-                    <li class="hollow button primary"><a href="portfolio">Portfolio</a></li>
-                    <li class="hollow button primary"><a href="contact">Contact</a></li>
-                </ul>
-            </header>
+            <cms:embed 'header.html' />
             <main>
                 <div class="row no-margin no-padding">
                     <h2>Contact Stefany</h2>
@@ -51,12 +43,7 @@
                 </div>
             </main>
         </div>
-        <footer>
-            <div class="row">
-                <div class="medium-6 columns"> <a class="footer-link" href="http://www.steviebales.com">©Stevie Bales 2016</a> </div>
-                <div class="medium-6 columns"> </div>
-            </div>
-        </footer>
+        <cms:embed 'footer.html' />
         <script src="js/vendor/jquery.js"></script>
         <script src="js/vendor/what-input.js"></script>
         <script src="js/vendor/foundation.js"></script>

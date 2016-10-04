@@ -1,5 +1,28 @@
 <?php require_once( 'admin/cms.php' ); ?>
-    <cms:template title='Resume' />
+    <cms:template title='Resume'>
+        <cms:repeatable name='directing_credits' label='Directing Credits'>
+            <cms:editable name="directed_show" type="text" label="Show" />
+            <cms:editable name="directed_year" type="text" label="Year" />
+            <cms:editable name="directed_playwright" type="text" label="Playwright" />
+            <cms:editable name="directed_company" type="text" label="Company" /> </cms:repeatable>
+        <cms:repeatable name='management_credits' label='Management Credits'>
+            <cms:editable name="management_show" type="text" label="Show" />
+            <cms:editable name="management_year" type="text" label="Year" />
+            <cms:editable name="management_role" type="text" label="Role" />
+            <cms:editable name="management_company" type="text" label="Company" /> </cms:repeatable>
+        <cms:repeatable name='acting_credits' label='Acting Credits'>
+            <cms:editable name="acted_show" type="text" label="Show" />
+            <cms:editable name="acted_year" type="text" label="Year" />
+            <cms:editable name="acted_role" type="text" label="Role" />
+            <cms:editable name="acted_company" type="text" label="Company" /> </cms:repeatable>
+        <cms:repeatable name='design_credits' label='Design Credits'>
+            <cms:editable name="design_show" type="text" label="Show" />
+            <cms:editable name="design_year" type="text" label="Year" />
+            <cms:editable name="design_role" type="text" label="Role" />
+            <cms:editable name="design_company" type="text" label="Company" /> </cms:repeatable>
+        <cms:repeatable name='qualification_credits' label='Qualifications'>
+            <cms:editable name="qualification_credit" type="nicedit" label="" /> </cms:repeatable>
+    </cms:template>
     <!DOCTYPE html>
     <html class="no-js" lang="en" dir="ltr">
 
@@ -14,15 +37,7 @@
 
     <body>
         <div class="page-wrap">
-            <header>
-                <ul class="nav-bar button-group">
-                    <li class="hollow button primary"><a href="about">About</a></li>
-                    <li class="hollow button primary"><a href="resume">Resume</a></li>
-                    <li class="hollow button primary"><a href="index">Home</a></li>
-                    <li class="hollow button primary"><a href="portfolio">Portfolio</a></li>
-                    <li class="hollow button primary"><a href="contact">Contact</a></li>
-                </ul>
-            </header>
+            <cms:embed 'header.html' />
             <main>
                 <div class="row">
                     <h2>Resume</h2>
@@ -32,7 +47,7 @@
                     <div class="row credits" id="directing">
                         <h5>Directing</h5>
                         <div class="row no-margin no-padding ">
-                            <cms:pages masterpage='directing-credit.php' paginate='1' limit='6'>
+                            <cms:show_repeatable 'directing_credits'>
                                 <div class="thirty-three med-padding">
                                     <p class="show left">
                                         <cms:show directed_show /> </p>
@@ -43,13 +58,13 @@
                                     <p class="company">
                                         <cms:show directed_company /> </p>
                                 </div>
-                            </cms:pages>
+                            </cms:show_repeatable>
                         </div>
                     </div>
                     <div class="row credits" id="directing">
                         <h5>Management</h5>
                         <div class="row no-margin no-padding ">
-                            <cms:pages masterpage='management-credit.php' paginate='1' limit='6'>
+                            <cms:show_repeatable 'management_credits'>
                                 <div class="thirty-three med-padding">
                                     <p class="show left">
                                         <cms:show management_show /> </p>
@@ -60,13 +75,13 @@
                                     <p class="company">
                                         <cms:show management_company /> </p>
                                 </div>
-                            </cms:pages>
+                            </cms:show_repeatable>
                         </div>
                     </div>
                     <div class="row credits" id="acting">
                         <h5>Acting</h5>
                         <div class="row no-margin no-padding ">
-                            <cms:pages masterpage='acting-credit.php' paginate='1' limit='6'>
+                            <cms:show_repeatable 'acting_credits'>
                                 <div class="thirty-three med-padding">
                                     <p class="show left">
                                         <cms:show acted_show /> </p>
@@ -77,13 +92,13 @@
                                     <p class="company">
                                         <cms:show acted_company /> </p>
                                 </div>
-                            </cms:pages>
+                            </cms:show_repeatable>
                         </div>
                     </div>
                     <div class="row credits" id="design">
                         <h5>Design</h5>
                         <div class="row no-margin no-padding ">
-                            <cms:pages masterpage='design-credit.php' paginate='1' limit='6'>
+                            <cms:show_repeatable 'design_credits'>
                                 <div class="thirty-three med-padding">
                                     <p class="show left">
                                         <cms:show design_show /> </p>
@@ -94,24 +109,21 @@
                                     <p class="company">
                                         <cms:show design_company /> </p>
                                 </div>
-                            </cms:pages>
+                            </cms:show_repeatable>
                         </div>
                     </div>
                     <div class="row credits" id="qualifications">
                         <h5>Qualifications</h5>
-                        <cms:pages masterpage='qualifications-credit.php' paginate='1' limit='6'>
-                        <p class="qualification"><cms:show qualification_credit /><br></p>
-                            </cms:pages>
+                        <cms:show_repeatable 'qualification_credits'>
+                            <p class="qualification">
+                                <cms:show qualification_credit />
+                                <br> </p>
+                        </cms:show_repeatable>
                     </div>
                 </div>
             </main>
         </div>
-        <footer>
-            <div class="row">
-                <div class="medium-6 columns"> <a class="footer-link" href="http://www.steviebales.com">©Stevie Bales 2016</a> </div>
-                <div class="medium-6 columns"> </div>
-            </div>
-        </footer>
+        <cms:embed 'footer.html' />
         <script src="js/vendor/jquery.js"></script>
         <script src="js/vendor/what-input.js"></script>
         <script src="js/vendor/foundation.js"></script>
